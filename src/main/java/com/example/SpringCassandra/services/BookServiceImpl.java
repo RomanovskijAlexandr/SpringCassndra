@@ -16,12 +16,11 @@ import java.util.UUID;
 @Service
 public class BookServiceImpl implements BookService {
     private BookRepository bookRepository;
-    private Book book;
 
+    //todo ломбук
     @Autowired
-    public BookServiceImpl(BookRepository bookRepository, Book book) {
+    public BookServiceImpl(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
-        this.book = book;
     }
 
     @Override
@@ -33,13 +32,13 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public Book getById(UUID id) {
+        //todo: почитать про оптионал
         return bookRepository.findById(id).orElse(null);
     }
 
     @Override
     public Book saveOrUpdate(Book book) {
-        bookRepository.save(book);
-        return book;
+        return bookRepository.save(book);
     }
 
     @Override

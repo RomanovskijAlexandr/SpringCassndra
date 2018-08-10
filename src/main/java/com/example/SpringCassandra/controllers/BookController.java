@@ -39,7 +39,7 @@ public class BookController {
     }
 
     @RequestMapping(value = "/book/updateBook/{id}/{value}", method = RequestMethod.GET)
-    public void addBook(
+    public void updateBook(
             @PathVariable("id") UUID id,
             @PathVariable("value") String value) {
         Book book = new Book();
