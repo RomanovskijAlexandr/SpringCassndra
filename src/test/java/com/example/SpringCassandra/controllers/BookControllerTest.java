@@ -11,8 +11,6 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
 import static org.mockito.Matchers.any;
@@ -22,17 +20,15 @@ import static org.mockito.Mockito.verify;
 @RunWith(MockitoJUnitRunner.class)
 public class BookControllerTest {
     @Mock
-    BookServiceImpl bookService;
+    private BookServiceImpl bookService;
     @InjectMocks
-    BookController bookController;
+    private BookController bookController;
     private Book book = new Book();
-    private List<Book> books = new ArrayList<>();
 
     @Before
     public void setUp() throws Exception {
         book.setId(UUID.randomUUID());
         book.setTitle("value");
-        books.add(book);
     }
 
     @Test

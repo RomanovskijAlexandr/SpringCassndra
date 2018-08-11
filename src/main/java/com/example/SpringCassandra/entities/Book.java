@@ -5,16 +5,16 @@ import org.springframework.data.cassandra.core.mapping.CassandraType;
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
-import org.springframework.stereotype.Component;
 
+import javax.persistence.Id;
 import java.util.UUID;
 
 /**
  * Entity class Book for Cassandra DB.
  */
 @Table
-@Component
 public class Book {
+    @Id
     @PrimaryKey
     @CassandraType(type = DataType.Name.UUID)
     private UUID id;

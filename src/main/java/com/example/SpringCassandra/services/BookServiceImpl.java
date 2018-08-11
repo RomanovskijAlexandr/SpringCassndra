@@ -2,7 +2,6 @@ package com.example.SpringCassandra.services;
 
 import com.example.SpringCassandra.entities.Book;
 import com.example.SpringCassandra.repositories.BookRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,7 +17,6 @@ public class BookServiceImpl implements BookService {
     private BookRepository bookRepository;
 
     //todo ломбук
-    @Autowired
     public BookServiceImpl(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }

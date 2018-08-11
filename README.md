@@ -2,6 +2,6 @@
 1. Install jdk 1.8.0_144 
 2. Install Python 2.7 (last version)
 3. Install Cassandra DB
-4. Create keyspace with name "books_keyspace" (create keyspace books_keyspace  WITH replication = {'class': 'SimpleStrategy', 'replication_factor' : 1};)
+4. Launch Cassandra DB
 5. Set your value of parameters in application.properties
 6. Launch application
