@@ -20,7 +20,7 @@ public class BookController {
         this.bookService = bookService;
     }
 
-    @RequestMapping(value = "/book/addBook/{value}", method = RequestMethod.GET)
+    @RequestMapping(value = "/book/addBook/{value}", method = RequestMethod.POST)
     public void addBook(
             @PathVariable("value") String value) {
         Book book = new Book();
@@ -34,7 +34,7 @@ public class BookController {
         return bookService.getById(id).toString();
     }
 
-    @RequestMapping(value = "/book/deleteBook/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/book/deleteBook/{id}", method = RequestMethod.DELETE)
     public void deleteBook(
             @PathVariable("id") UUID id) {
         bookService.delete(id);
