@@ -1,6 +1,9 @@
 package com.example.SpringCassandra.entities;
 
 import com.datastax.driver.core.DataType;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 import org.springframework.data.cassandra.core.mapping.CassandraType;
 import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
@@ -13,6 +16,9 @@ import java.util.UUID;
  * Entity class Book for Cassandra DB.
  */
 @Table
+@Setter
+@Getter
+@ToString
 public class Book {
     @Id
     @PrimaryKey
@@ -23,26 +29,5 @@ public class Book {
 
     public Book() {
         this.id = UUID.randomUUID();
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return value;
-    }
-
-    public void setTitle(String title) {
-        this.value = title;
-    }
-
-    @Override
-    public String toString() {
-        return "id: " + id + " value: " + value;
     }
 }

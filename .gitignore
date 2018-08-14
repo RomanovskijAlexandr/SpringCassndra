@@ -28,3 +28,4 @@ mvnw.cmd
 .mvn/wrapper/maven-wrapper.jar
 .mvn/
 *.log
+classes/

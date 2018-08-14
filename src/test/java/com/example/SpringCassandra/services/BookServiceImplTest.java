@@ -31,7 +31,7 @@ public class BookServiceImplTest {
     @Before
     public void setUp() throws Exception {
         book.setId(UUID.randomUUID());
-        book.setTitle("value");
+        book.setValue("value");
         books.add(book);
     }
 

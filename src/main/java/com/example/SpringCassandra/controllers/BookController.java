@@ -24,7 +24,7 @@ public class BookController {
     public void addBook(
             @PathVariable("value") String value) {
         Book book = new Book();
-        book.setTitle(value);
+        book.setValue(value);
         bookService.saveOrUpdate(book);
     }
 
@@ -45,7 +45,7 @@ public class BookController {
             @PathVariable("id") UUID id,
             @PathVariable("value") String value) {
         Book book = new Book();
-        book.setTitle(value);
+        book.setValue(value);
         book.setId(id);
         bookService.saveOrUpdate(book);
     }

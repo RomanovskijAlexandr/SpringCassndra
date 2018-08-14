@@ -28,12 +28,12 @@ public class BookControllerTest {
     @Before
     public void setUp() throws Exception {
         book.setId(UUID.randomUUID());
-        book.setTitle("value");
+        book.setValue("value");
     }
 
     @Test
     public void addBook() {
-        bookController.addBook(book.getTitle());
+        bookController.addBook(book.getValue());
         verify(bookService, times(1)).saveOrUpdate(any(Book.class));
     }
 
@@ -51,7 +51,7 @@ public class BookControllerTest {
 
     @Test
     public void updateBook() {
-        bookController.updateBook(book.getId(), book.getTitle());
+        bookController.updateBook(book.getId(), book.getValue());
         verify(bookService, times(1)).saveOrUpdate(any(Book.class));
     }
 }
